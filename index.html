@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Vite — Funcionalidades</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>⚡ Demo Vite</h1>
+        <p class="subtitle">
+          Projeto demonstrativo das principais funcionalidades do Vite
+        </p>
+      </header>
+
+      <main>
+        <section class="card">
+          <h2>🔥 Hot Module Replacement (HMR)</h2>
+          <p>
+            Edite <code>src/main.js</code> ou <code>src/style.css</code> com o
+            servidor de dev rodando — o navegador atualiza sem perder estado.
+          </p>
+          <div id="counter-area"></div>
+        </section>
+
+        <section class="card">
+          <h2>📦 Build & Code Splitting</h2>
+          <p>
+            Rode <code>npm run build</code> para gerar o bundle em
+            <code>dist/</code>. Vite usa <strong>Rollup</strong> em produção,
+            com tree-shaking, minificação e hash nos nomes dos arquivos.
+          </p>
+          <button id="lazy-btn">Carregar módulo sob demanda (lazy)</button>
+          <pre id="lazy-output"></pre>
+        </section>
+
+        <section class="card">
+          <h2>🌱 Variáveis de Ambiente</h2>
+          <p>
+            Vite expõe variáveis prefixadas com <code>VITE_</code> via
+            <code>import.meta.env</code>.
+          </p>
+          <pre id="env-output"></pre>
+        </section>
+
+        <section class="card">
+          <h2>🧪 Testes com Vitest</h2>
+          <p>
+            Rode <code>npm test</code> para executar a suíte. O Vitest
+            compartilha a configuração do Vite — sem duplicação.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>📊 Análise de Bundle</h2>
+          <p>
+            Rode <code>npm run build:analyze</code> para gerar
+            <code>dist/stats.html</code> com a visualização do bundle.
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <p>Feito com Vite ⚡ — veja o <code>README.md</code> para detalhes</p>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
