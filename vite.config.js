@@ -32,8 +32,9 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         // Code splitting manual: separa libs em chunks diferentes
-        manualChunks: {
-          utils: ['./src/utils.js'],
+        // (forma de função — compatível com Rollup e Rolldown)
+        manualChunks(id) {
+          if (id.includes('/src/utils.js')) return 'utils';
         },
         // Nomes de arquivo com hash para cache busting
         entryFileNames: 'assets/[name]-[hash].js',
